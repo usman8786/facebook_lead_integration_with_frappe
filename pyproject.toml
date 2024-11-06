@@ -1,0 +1,20 @@
+[project]
+name = "facebook_lead_integration"
+authors = [
+    { name = "Muhammad Usman", email = "usman.mushtaq8786@gmail.com"}
+]
+description = "Facebook Lead Integration is a Frappe application designed to capture and manage leads generated from Facebook ad campaigns directly into your system. It connects with Facebook's API to verify webhooks, receive real-time lead data, and automatically create lead records in Frappe. This app also handles long-lived token management, custom field creation, and dynamic mapping of lead details, offering an efficient and automated solution for managing social media-generated leads within the Frappe framework."
+requires-python = ">=3.10"
+readme = "README.md"
+dynamic = ["version"]
+dependencies = [
+    # "frappe~=15.0.0" # Installed and managed by bench.
+]
+
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+# These dependencies are only installed when developer mode is enabled
+[tool.bench.dev-dependencies]
+# package_name = "~=1.1.0"
