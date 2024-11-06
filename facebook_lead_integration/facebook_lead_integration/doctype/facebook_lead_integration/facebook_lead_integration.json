@@ -1,0 +1,111 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "creation": "2024-09-03 17:02:45.666179",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "introduction_for_integration_section",
+  "text_editor_2",
+  "integration_detail_section",
+  "app_id",
+  "doctype_name",
+  "column_break_2",
+  "app_secret_id",
+  "custom_fields_insert_after",
+  "section_break_4",
+  "page_access_token",
+  "facebook_verify_token",
+  "verify_token"
+ ],
+ "fields": [
+  {
+   "fieldname": "app_id",
+   "fieldtype": "Data",
+   "label": "App ID"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "app_secret_id",
+   "fieldtype": "Data",
+   "label": "App Secret ID"
+  },
+  {
+   "fieldname": "page_access_token",
+   "fieldtype": "Text",
+   "label": "Page Access Token (The token will be refreshed after each lead is received from Facebook)"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Page Access Token"
+  },
+  {
+   "fieldname": "facebook_verify_token",
+   "fieldtype": "Heading",
+   "label": "Facebook Verify Token"
+  },
+  {
+   "description": "Any String that Facebook will use to verify your webhook.",
+   "fieldname": "verify_token",
+   "fieldtype": "Data",
+   "label": "Verify Token(For Facebook Webhook)"
+  },
+  {
+   "description": "Facebook leads will be saved in selected Doctype",
+   "fieldname": "doctype_name",
+   "fieldtype": "Link",
+   "label": "DocType",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "integration_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Integration Detail"
+  },
+  {
+   "description": "Enter field_name of that field",
+   "fieldname": "custom_fields_insert_after",
+   "fieldtype": "Data",
+   "label": "Custom Fields Insert After"
+  },
+  {
+   "fieldname": "introduction_for_integration_section",
+   "fieldtype": "Section Break",
+   "label": "Introduction for Integration"
+  },
+  {
+   "fieldname": "text_editor_2",
+   "fieldtype": "Text Editor",
+   "read_only": 1
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-09-06 12:13:29.608785",
+ "modified_by": "Administrator",
+ "module": "Facebook Lead Integration",
+ "name": "Facebook Lead Integration",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

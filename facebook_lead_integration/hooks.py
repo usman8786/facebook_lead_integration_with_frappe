@@ -1,7 +1,11 @@
+from . import __version__ as app_version
+
 app_name = "facebook_lead_integration"
 app_title = "Facebook Lead Integration"
 app_publisher = "Muhammad Usman"
-app_description = "Facebook Lead Integration is a Frappe application designed to capture and manage leads generated from Facebook ad campaigns directly into your system. It connects with Facebook\'s API to verify webhooks, receive real-time lead data, and automatically create lead records in Frappe. This app also handles long-lived token management, custom field creation, and dynamic mapping of lead details, offering an efficient and automated solution for managing social media-generated leads within the Frappe framework."
+app_description = "Automatically create and manage Facebook leads in Frappe/ERPNext with seamless integration and real-time data capture."
+app_icon = "octicon octicon-file-directory"
+app_color = "grey"
 app_email = "usman.mushtaq8786@gmail.com"
 app_license = "MIT"
 
@@ -40,7 +44,7 @@ app_license = "MIT"
 
 # website user home page (by Role)
 # role_home_page = {
-# 	"Role": "home_page"
+#	"Role": "home_page"
 # }
 
 # Generators
@@ -49,42 +53,11 @@ app_license = "MIT"
 # automatically create page for each record of this doctype
 # website_generators = ["Web Page"]
 
-# Jinja
-# ----------
-
-# add methods and filters to jinja environment
-# jinja = {
-# 	"methods": "facebook_lead_integration.utils.jinja_methods",
-# 	"filters": "facebook_lead_integration.utils.jinja_filters"
-# }
-
 # Installation
 # ------------
 
 # before_install = "facebook_lead_integration.install.before_install"
 # after_install = "facebook_lead_integration.install.after_install"
-
-# Uninstallation
-# ------------
-
-# before_uninstall = "facebook_lead_integration.uninstall.before_uninstall"
-# after_uninstall = "facebook_lead_integration.uninstall.after_uninstall"
-
-# Integration Setup
-# ------------------
-# To set up dependencies/integrations with other apps
-# Name of the app being installed is passed as an argument
-
-# before_app_install = "facebook_lead_integration.utils.before_app_install"
-# after_app_install = "facebook_lead_integration.utils.after_app_install"
-
-# Integration Cleanup
-# -------------------
-# To clean up dependencies/integrations with other apps
-# Name of the app being uninstalled is passed as an argument
-
-# before_app_uninstall = "facebook_lead_integration.utils.before_app_uninstall"
-# after_app_uninstall = "facebook_lead_integration.utils.after_app_uninstall"
 
 # Desk Notifications
 # ------------------
@@ -121,7 +94,7 @@ app_license = "MIT"
 # 		"on_update": "method",
 # 		"on_cancel": "method",
 # 		"on_trash": "method"
-# 	}
+#	}
 # }
 
 # Scheduled Tasks
@@ -139,10 +112,10 @@ app_license = "MIT"
 # 	],
 # 	"weekly": [
 # 		"facebook_lead_integration.tasks.weekly"
-# 	],
+# 	]
 # 	"monthly": [
 # 		"facebook_lead_integration.tasks.monthly"
-# 	],
+# 	]
 # }
 
 # Testing
@@ -154,8 +127,11 @@ app_license = "MIT"
 # ------------------------------
 #
 # override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "facebook_lead_integration.event.get_events"
 # }
+override_whitelisted_methods = {
+	#"frappe.desk.doctype.event.event.get_events": "facebook_lead_integration.event.get_events",
+	"facebook_lead_integration.facebook_lead_integration.facebook_webhook.facebook_lead": "facebook_lead_integration.facebook_webhook.facebook_lead"
+}
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
@@ -168,44 +144,30 @@ app_license = "MIT"
 #
 # auto_cancel_exempted_doctypes = ["Auto Repeat"]
 
-# Ignore links to specified DocTypes when deleting documents
-# -----------------------------------------------------------
-
-# ignore_links_on_delete = ["Communication", "ToDo"]
-
-# Request Events
-# ----------------
-# before_request = ["facebook_lead_integration.utils.before_request"]
-# after_request = ["facebook_lead_integration.utils.after_request"]
-
-# Job Events
-# ----------
-# before_job = ["facebook_lead_integration.utils.before_job"]
-# after_job = ["facebook_lead_integration.utils.after_job"]
 
 # User Data Protection
 # --------------------
 
-# user_data_fields = [
-# 	{
-# 		"doctype": "{doctype_1}",
-# 		"filter_by": "{filter_by}",
-# 		"redact_fields": ["{field_1}", "{field_2}"],
-# 		"partial": 1,
-# 	},
-# 	{
-# 		"doctype": "{doctype_2}",
-# 		"filter_by": "{filter_by}",
-# 		"partial": 1,
-# 	},
-# 	{
-# 		"doctype": "{doctype_3}",
-# 		"strict": False,
-# 	},
-# 	{
-# 		"doctype": "{doctype_4}"
-# 	}
-# ]
+user_data_fields = [
+	{
+		"doctype": "{doctype_1}",
+		"filter_by": "{filter_by}",
+		"redact_fields": ["{field_1}", "{field_2}"],
+		"partial": 1,
+	},
+	{
+		"doctype": "{doctype_2}",
+		"filter_by": "{filter_by}",
+		"partial": 1,
+	},
+	{
+		"doctype": "{doctype_3}",
+		"strict": False,
+	},
+	{
+		"doctype": "{doctype_4}"
+	}
+]
 
 # Authentication and authorization
 # --------------------------------
@@ -213,3 +175,4 @@ app_license = "MIT"
 # auth_hooks = [
 # 	"facebook_lead_integration.auth.validate"
 # ]
+
