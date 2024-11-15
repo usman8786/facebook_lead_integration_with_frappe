@@ -20,8 +20,8 @@ bench install-app facebook_lead_integration
 ## Configuration
 In Frappe, navigate to Facebook Lead Integration settings.
 Configure the following values:
-App ID and App Secret from your Facebook App.
-Page Access Token (short-lived), which will be exchanged for a long-lived token.
+* [App ID and App Secret from your Facebook App.]
+* [Page Access Token (short-lived), which will be exchanged for a long-lived token.]
 Verify Token for webhook verification.
 Doctype Name (e.g., "Lead") where Facebook leads will be stored.
 
