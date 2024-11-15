@@ -28,7 +28,8 @@ In Frappe, navigate to **Facebook Lead Integration Settings** and configure the 
 
 ## Usage
 ### Webhook Setup
-In your Facebook App settings, set up the webhook with the URL provided by this app, using the configured Verify Token for validation.
+In your Facebook App settings, set up the webhook with the URL provided by this app, using the configured Verify Token for validation.  
+For detailed instructions, refer to the [Facebook Official Documentation](https://developers.facebook.com/docs/marketing-api/guides/lead-ads/quickstart/webhooks-integration/).
 
 ### Lead Data Handling
 When a lead is submitted on Facebook, the app:
