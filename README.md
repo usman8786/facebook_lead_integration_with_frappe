@@ -36,5 +36,8 @@ Lead Data Handling: When a lead is submitted on Facebook, the app:
 ## Custom Field Creation
 If the Facebook lead form includes fields not present in your Frappe Lead doctype, this app dynamically creates those fields as custom fields in the specified doctype.
 
+## 🤝 Contributions
+I actively encourage contributions! Feel free to submit a **pull request** for any improvements or new features. Your input is always welcomed, and I’m open to collaborating on projects and enhancements.
+
 ### License
 MIT
