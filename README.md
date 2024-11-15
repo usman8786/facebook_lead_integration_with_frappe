@@ -11,9 +11,12 @@ Custom Field Creation: Automatically creates custom fields in the Lead doctype i
 
 ## Installation
 Install the app:
-bench get-app facebook_lead_integration /path/to/facebook_lead_integration
+```diff
+bench get-app [facebook_lead_integration /path/to/facebook_lead_integration](https://github.com/usman8786/facebook_lead_integration_with_frappe.git)
+```
+```diff
 bench install-app facebook_lead_integration
-
+```
 ## Configuration
 In Frappe, navigate to Facebook Lead Integration settings.
 Configure the following values:
